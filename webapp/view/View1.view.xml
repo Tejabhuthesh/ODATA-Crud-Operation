@@ -1,0 +1,62 @@
+<!-- <mvc:View controllerName="idodata1.project50000.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <content />
+    </Page>
+</mvc:View> -->
+
+<mvc:View controllerName="idodata1.project50000.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+  
+    <Page id="page" title="{i18n>title}">
+        <headerContent>
+         <Button icon="sap-icon://unlocked" text="Unlocked" press="Lock" type="Transparent" />
+            <Button  id="editmode" icon="sap-icon://edit" text="Edit" press="onEdit" type="Transparent" />
+            <Button id="addButton" icon="sap-icon://add" text="Add" type="Transparent" press="onAdd" />
+            <Button id="deleteButton" icon="sap-icon://delete" text="Delete" type="Transparent" press="onDelite" />
+        </headerContent>
+        <content>
+            <ScrollContainer height="100%" width="100%" vertical="true" focusable="true">
+                <Table width="80rem" mode="MultiSelect" id="idProductsTable" inset="true" headerText="EMPLOYE DETAILS" visible="true" alternateRowColors="true" items="{
+			path: 'Data1>/results'}">
+                    <columns>
+                        <Column width="auto">
+                            <Text text="Name" />
+                        </Column>
+
+                        <Column >
+                            <Text text="Zemprole" />
+                        </Column>
+
+                        <Column >
+                            <Text text="Zgender" />
+                        </Column>
+
+                        <Column >
+                            <Text text="Zcity" />
+                        </Column>
+
+                        <Column >
+                            <Text text="Znumber" />
+                        </Column>
+
+                    </columns>
+                    <items>
+                        <ColumnListItem type="Active" id="colss">
+                            <cells>
+                                <Text text="{Data1>Name}" />
+                                <Text text="{Data1>Zemprole}" />
+                                <Text text="{Data1>Zgender}" />
+                                <Text text="{Data1>Zcity}" />
+                                <Text text="{Data1>Znumber}" />
+                            
+                            </cells>
+                        </ColumnListItem>
+                    </items>
+                </Table>
+            </ScrollContainer>
+        </content>
+    </Page>
+</mvc:View>

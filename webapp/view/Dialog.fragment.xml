@@ -1,0 +1,25 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:f="sap.ui.layout.form">
+    <Dialog id="idDialog" afterClose="dialogAfterclosedit">
+        <f:SimpleForm editable="false" layout="ResponsiveGridLayout">
+            <f:content>
+               
+                <Label text="Name" />
+                  <Text text="{Data3>/Name}" />
+                   <Label text="Zemprole" />
+                <Input value="{Data3>/Zemprole}" />
+                  <Label text="Zgender" />
+                <Input value="{Data3>/Zgender}" />
+                  <Label text="Znumber" />
+                <Input value="{Data3>/Znumber}" />
+                  <Label text="Zcity" />
+                <Input value="{Data3>/Zcity}" />
+                
+            </f:content>
+        </f:SimpleForm>
+
+        <HBox justifyContent="End" alignItems="End">
+            <Button id="ok1" type="Transparent" text="Save" press="SavePress" />
+            <!-- <Button id="ok2" type="Transparent" text="Save" press="SavePress" /> -->
+        </HBox>
+    </Dialog>
+</core:FragmentDefinition>
